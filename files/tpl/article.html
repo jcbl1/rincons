@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-width=1.0, maximum=1.0, user-scalable=0">
+	<meta name="description" content="还在开发的一个主页，我其实还没确定要建设一个怎样的网站。">
+	<link rel="shortcut icon" type="image/x-icon" href="https://rincons.cc/p/r-64.png">
+	<title>转移到另一个Linux发行版的历程分享</title>
+	<script src="https://rincons.cc/jquery/jquery-3.5.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/article.css?v=1.0">
+</head>
+<body>
+	<div id="navBar">
+		<div class="sel"><p>关于</p></div>
+		<div class="sel"><p>搜索</p></div>
+		<div class="sel"><p>注册/登陆</p></div>
+
+	</div>
+	<div id="showCase0">
+		<!-- <video src="https://rincons.cc/v/pexels-taryn-elliott-5699145-1080.mp4" autoplay loop muted></video> -->
+		<img alt="背景图片" src="https://rincons.cc/p/pexels-elina-sazonova-4275965.jpg">
+		<div class="cover"></div>
+		<div id="h1">
+			<p id="logoTitle">转移到另一个Linux发行版的历程分享<p>
+			<p>本文由jeffl1n创建于2020年11月15日</p>
+		</div>
+	</div>
+	<div class="main">
+		<div class="align">
+			<div class="page">
+				<h1>安装v2ray</h1>
+				<a href="https://rincons.cc/r/v2ray.zip">点击下载v2ray-core</a><br>
+				<a href="https://rincons.cc/r/config.json">下载config.json</a><br>
+				<p>将v2ray v2ctl geoip.dat geosite.dat 复制到 /usr/local/bin/</p>
+				<p>为v2ctl和v2ray设定可执行</p>
+				<p>复制config.json到/usr/local/etc/v2ray/</p>
+				<p>复制v2ray.service到/etc/systemd/system/</p>
+				<p>systemctl enable v2ray && systemctl start v2ray</p>
+				<h1>安装Chrome浏览器</h1>
+				<a href="https://www.google.com/chrome/" target="_blank">前往</a>
+				<h1>Config Update Manager</h1>
+				<h1>安装synaptic</h1>
+				<h1>安装dconf</h1>
+				<h1>dconf</h1>
+				<p>org/gnome/shell/extensions/dash-to-dock/click-action 'minimize'</p>
+				<p>org/gnome/shell/extensions/dash-to-dock/show-apps-at-top 'on'</p>
+				<h1>减少swap使用</h1>
+				<p>cat /proc/sys/vm/swappiness</p>
+				<p>
+					vim admin:///etc/sysctl.conf
+					<br>添加一行vm.swappiness=10
+				</p>
+				<p>重启</p>
+				<h1>安装gnome-tweak-tool</h1>
+				<h1>安装chrome-gnome-shell</h1>
+				<p>到<a href="https://extensions.gnome.org/">这里</a>安装插件</p>
+				<p>安装user themes</p>
+				<p>hide activities button</p>
+				<p>simple net speed</p>
+				<h1>我的主题配置</h1>
+				<p>applications: Flat-Remix-GTK-Blue-Dark</p>
+				<p>Cursor: DMZ-White</p>
+				<p>Icons: Tela-dark</p>
+				<p>Shell: Orchis-dark-compact</p>
+				<p>Sound: Yaru</p>
+				<h1>备份计划</h1>
+				<h1>关闭一些开机启动程式</h1>
+				<p>sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop</p>
+				<h1>bleachbit</h1>
+				<h1>vlc</h1>
+				<h1>安装的应用</h1>
+				<ul>
+					<li>filezilla</li>
+					<li>putty</li>
+					<li>kazam</li>
+					<li>netease cloud music</li>
+					<li>onlyoffice</li>
+					<li>sublime text</li>
+					<li>mc</li>
+				</ul>
+				<h1>安装java</h1>
+				<h1>安装go</h1>
+				<h1>putty的配置</h1>
+				<p>columns 82 rows 32</p>
+				<h2>colours</h2>
+				<p>default foreground: 187 187 187</p>
+				<p>defualt background: 30 32 42</p>
+				<p>default bold background: 85 85 85</p>
+				<p>ansi blue: 76 124 186</p>
+				<p>ansi blue bold: 186 211 255</p>
+				<h1>两个自定义快捷键</h1>
+				<p>Ctrl+Alt+P: putty -load debian</p>
+				<p>Ctrl+Alt+O: filezilla --site="0/debian"</p>
+				<h1>popos的字体: fira mono</h1>
+			</div>
+		</div>
+	</div>
+
+	<!-- 一个横的东西 -->
+
+	<!-- footer -->
+	<footer>
+		<p>&copy; Rincons.cc 2020</p>
+	</footer>
+
+	<script>
+		$(function(){
+			//Show navBar
+			$("#navBar").css("top", "0");
+
+			//navBar.sel width
+			$("#navBar .sel").css("width", document.getElementById("navBar").offsetWidth/3+"px");
+
+			//Gen color
+			for (j=0;j<3;j++){
+				colors=["#26998a","#e4bf66","#e26a4b"]
+				elems = document.getElementsByClassName("sel");
+				elems[j].style.backgroundColor=colors[j];
+				elems[j].style.left=j*33+"%";
+			}
+			
+
+
+			//$("#showCase0").css("height", document.documentElement.clientHeight+"px");
+			if(document.documentElement.clientWidth / document.documentElement.clientHeight>=348/216){
+				$("#showCase0 video").css({
+					"width": "100%",
+					"height": "auto"
+				});
+			} else {
+				$("#showCase0 video").css({
+					"height":"100%",
+					"width":"auto"
+				});
+			}
+			// document.body.onresize = function(){
+			// 	$("#showCase0").css("height", document.documentElement.clientHeight+"px");
+			// 	if(document.documentElement.clientWidth / document.documentElement.clientHeight>=348/216){
+			// 		$("#showCase0 video").css({
+			// 			"width": "100%",
+			// 			"height": "auto"
+			// 		});
+			// 	} else {
+			// 		$("#showCase0 video").css({
+			// 			"height":"100%",
+			// 			"width":"auto"
+			// 		});
+			// 	}
+			// };
+
+			// $(".sel").on("mouseover", function(){
+			// 	if($(this).hasClass("active")){
+			// 		return;
+			// 	}
+			// 	$(this).css("bottom", "-40px");
+			// 	$(this)
+			// });
+			// $(".sel").on("mouseout",function(){
+			// 	if($(this).hasClass("active")){
+			// 		return;
+			// 	}
+			// 	$(this).css("bottom","0");
+			// });
+
+			document.body.onresize=function(){
+				$("#navBar .sel").css("width", document.getElementById("navBar").offsetWidth/3+"px");
+			};
+		});
+	</script>
+</body>
+</html>

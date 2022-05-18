@@ -1,0 +1,237 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: #ededf5;
+	font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;
+}
+#navBar{
+	position: fixed;
+	display: inline-block;
+	right: 5%;
+	top: -20px;
+	width: 90%;
+	max-width: 400px;
+	height: 20px;
+	z-index: 5;
+	color: #fff;
+	transition: top 0.3s 0.8s;
+}
+#navBar	.sel{
+	position: absolute;
+	height: 300%;
+	background: #1b2026;
+	bottom:0;
+	transition: bottom 0.3s;
+}
+#navBar .sel:hover{
+	cursor: pointer;
+	bottom: -40px;
+}
+#navBar .sel p{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	white-space: nowrap;
+}
+
+
+#showCase0{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 500px;
+}
+#showCase0 video{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#showCase0 img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	height: auto;
+}
+.cover{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	/*background: #15161a;*/
+	background: #100;
+	opacity: 0.2;
+}
+#h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 90%;
+	max-width: 450px;
+	color: #fff;
+	z-index: 2;
+	transform: translate(-50%, -50%);
+}
+#h1 p{
+	font-size: 1.2em;
+}
+#logoTitle{
+	font-size: 2.8em;
+}
+
+.main{
+	position: relative;
+	width: 100%;
+	padding: 70px 0;
+}
+.align{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%,0);
+	width: 1300px;
+}
+.main .box{
+	position: relative;
+	display: inline-block;
+	width: 384px;
+	margin: 23px;
+	padding: 2.2em 3.6em;
+	background: #fff;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+.main .box h1{
+	margin-top: 0;
+	padding: 0;
+	font-size: 1.3em;
+	color: #0a0a0a;
+	text-align: center;
+}
+.main .box h1:hover{
+	cursor: pointer;
+}
+.main .box p{
+	margin: 0;
+	padding: 0;
+	color: #666;
+	text-align: center;
+	line-height: 1.4em;
+}
+.main .box p:hover{
+	cursor: pointer;
+}
+.main .box .markl{
+	position: relative;
+	width: 100%;
+	margin-top: 20px;
+	font-size: 0.9em;
+}
+.main .box .markm{
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+.main .box .mark{
+	display: inline;
+	background: #e2e4f5;
+	padding: 4px 8px;
+	border-radius: 24px;
+}
+.main .box .mark:hover{
+	cursor: pointer;
+}
+
+#showCase1{
+	position: relative;
+	width: 100%;
+	background: #151a2a;
+	color: #eaeaea;
+	padding: 1.6em 0;
+	box-sizing: border-box;
+	overflow-wrap: none;
+}
+#siteStatus{
+	margin-top: 0;
+	font-size: 1.4em;
+	text-align: center;
+}
+.box1{
+	position: relative;
+	display: inline-block;
+	position: relative;
+	width: 33%;
+	box-sizing:border-box;
+	text-align: center;
+}
+.nums{
+	color: #fff;
+	font-size: 1.6em;
+	margin: 0;
+}
+.what{
+	margin-bottom: 10px;
+}
+
+#showCase2{
+	position: relative;
+	width: 100%;
+	height: 500px;
+}
+
+
+footer{
+	display: block;
+	position: relative;
+	width: 100%;
+	background: #fff;
+	box-sizing: border-box;
+	padding: 1em;
+}
+footer p{
+	font-size: 0.9em;
+	color: #666;
+	text-align: center;
+}
+
+
+@media screen and (max-width: 750px){
+	#showCase0 img{
+		height: 100%;
+		width: auto;
+	}
+}
+@media screen and (max-width: 1460px){
+	.align {
+		width: 864px;
+	}
+}
+@media screen and (max-width: 900px){
+	.align {
+		width: 60%;
+	}
+	.main .box{
+		width: 100%;
+		margin: 23px 0;
+	}
+	.box1{
+		width: 32%;
+	}
+}
+@media screen and (max-width: 650px){
+	.align {
+		width: 80%;
+	}
+}
+@media screen and (max-width: 420px){
+	.align {
+		width: 90%;
+	}
+}
